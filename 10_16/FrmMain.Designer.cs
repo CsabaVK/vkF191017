@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_nev = new System.Windows.Forms.ComboBox();
             this.tb_nev = new System.Windows.Forms.TextBox();
             this.cb_vega = new System.Windows.Forms.CheckBox();
             this.rd_no = new System.Windows.Forms.RadioButton();
@@ -57,22 +57,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vendég neve:";
             // 
-            // comboBox1
+            // cb_nev
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 32);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            this.cb_nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cb_nev.FormattingEnabled = true;
+            this.cb_nev.Location = new System.Drawing.Point(155, 9);
+            this.cb_nev.Name = "cb_nev";
+            this.cb_nev.Size = new System.Drawing.Size(165, 32);
+            this.cb_nev.TabIndex = 1;
+            this.cb_nev.SelectedIndexChanged += new System.EventHandler(this.cb_nev_SelectedIndexChanged);
             // 
             // tb_nev
             // 
             this.tb_nev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tb_nev.Location = new System.Drawing.Point(158, 222);
             this.tb_nev.Name = "tb_nev";
-            this.tb_nev.Size = new System.Drawing.Size(100, 29);
+            this.tb_nev.Size = new System.Drawing.Size(162, 29);
             this.tb_nev.TabIndex = 2;
             // 
             // cb_vega
@@ -107,6 +107,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Vendég Hozzáadása";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // lb_asztal
             // 
@@ -238,10 +239,10 @@
             this.Controls.Add(this.cb_vega);
             this.Controls.Add(this.tb_asztal);
             this.Controls.Add(this.tb_nev);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_nev);
             this.Controls.Add(this.label1);
             this.Name = "FrmMain";
-            this.Text = "0,";
+            this.Text = "Ülésrend Editor Pro 2000";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,7 +251,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_nev;
         private System.Windows.Forms.TextBox tb_nev;
         private System.Windows.Forms.CheckBox cb_vega;
         private System.Windows.Forms.RadioButton rd_no;
